@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 网站标题
-subtitle: '网站副标题'
-description: '网站描述'
-keywords:
+title: 'ultralinux_blog'
+subtitle: '我的部落格'
+description: 'ultralinux 个人博客 记录没好生活'
+keywords: ultralinux,ultralinux_blog,ultralinux.cn
 author: ultralinux
-language: cn
-timezone: ''
+language: zh-CN
+timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -18,8 +18,8 @@ root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: true # Set to false to remove trailing '.html' from permalinks
+  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: false # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -98,9 +98,16 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: butterfly #landscape
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: ''
+
+####-----------禁用一键部署--------####
+#deploy:
+#  type: 'git'
+#  repo: 'https://github.com/ultralinux/ultralinux.github.io.git'
+#  branch: main
+#由于使用Netlify构建(建站)的原因，也不要使用官网的另一种部署方法
+#就像是开发人员上传代码一样就好了
+####------------------------------####
