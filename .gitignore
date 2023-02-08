@@ -8,4 +8,5 @@ public/
 .vscode/
 .idea/
 /.idea/
-.themes/butterfly/
+.idea
+.themes/
