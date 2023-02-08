@@ -1,12 +1,12 @@
 .DS_Store
 Thumbs.db
-# db.json
-#*.log
+ db.json
+*.log
 node_modules/
-# public/
-#.deploy*/
+ public/
+.deploy*/
 .deploy_git/.git
-#.vscode/
-#.idea/
-#/.idea/
+.vscode/
+.idea/
+/.idea/
 .themes/butterfly/.git
