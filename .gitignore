@@ -1,10 +1,11 @@
 .DS_Store
 Thumbs.db
-db.json
+#db.json
 *.log
 # node_modules/
 # public/
-.deploy*/
+#.deploy*/
+.deploy_git/.git
 .vscode/
 .idea/
 /.idea/
