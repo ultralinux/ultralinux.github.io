@@ -1,5 +1,6 @@
 {
     "editor.suggest.showStatusBar": false,
     "workbench.statusBar.visible": true,
-    "problems.showCurrentInStatus": true
+    "problems.showCurrentInStatus": true,
+    "workbench.panel.defaultLocation": "bottom"
 }
