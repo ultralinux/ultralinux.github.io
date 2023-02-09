@@ -437,9 +437,9 @@ messenger:
 footer:
   owner:
     enable: true
-    since: 2020
-  custom_text:
-  copyright: true # Copyright of theme and framework
+    since: 2018
+  custom_text: 永远相信美好的事情即将发生
+  copyright: false # Copyright of theme and framework
 
 # Analysis
 # --------------------------------------
@@ -662,7 +662,7 @@ aside:
   hide: false
   button: true
   mobile: true # display on mobile
-  position: right # left or right
+  position: left # left or right
   display:
     archive: true
     tag: true
@@ -673,11 +673,11 @@ aside:
     button:
       enable: true
       icon: fab fa-github
-      text: Follow Me
+      text: Follow Me 嘻嘻
       link: https://github.com/xxxxxx
   card_announcement:
     enable: true
-    content: This is my Blog
+    content: 哦 ~ ！This is my Blog
   card_recent_post:
     enable: true
     limit: 5 # if set 0 will show all
@@ -716,8 +716,8 @@ busuanzi:
 # Time difference between publish date and now (網頁運行時間)
 # Formal: Month/Day/Year Time or Year/Month/Day Time
 runtimeshow:
-  enable: false
-  publish_date:
+  enable: true
+  publish_date: 2018/7/6 00:00:00
 
 # Aside widget - Newest Comments
 newest_comments:
@@ -732,7 +732,7 @@ newest_comments:
 
 # Conversion between Traditional and Simplified Chinese (簡繁轉換)
 translate:
-  enable: false
+  enable: true
   # The text of a button
   default: 繁
   # the language of website (1 - Traditional Chinese/ 2 - Simplified Chinese）
@@ -756,10 +756,10 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 1
 
 # show scroll percent in scroll-to-top button
-rightside_scroll_percent: false
+rightside_scroll_percent: true
 
 # Don't modify the following settings unless you know how they work (非必要請不要修改 )
 # Choose: readmode,translate,darkmode,hideAside,toc,chat,comment

@@ -3,6 +3,7 @@ title: test
 date: 2023-02-02 15:17:29
 description: 只显示
 sticky: 1
+copyright: true
 copyright_author: ultralinux
 copyright_author_href: 不给看，嘿嘿！ # https://xxxxxx.com
 copyright_url: https://blog.ultralinux.cn
