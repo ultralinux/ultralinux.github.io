@@ -111,3 +111,9 @@ theme: butterfly       ## landscape(默认)
 #由于使用Netlify构建(建站)的原因，也不要使用官网的另一种部署方法
 #就像是开发人员上传代码一样就好了
 ####------------------------------####
+
+search:
+  path: search.xml
+  field: post
+  content: true
+  template: ./search.xml
