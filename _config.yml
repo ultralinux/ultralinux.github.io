@@ -115,5 +115,5 @@ theme: butterfly       ## landscape(默认)
 search:
   path: search.xml
   field: post
-  content: true
-  template: ./search.xml
+  formart: html
+  limit: 10000
