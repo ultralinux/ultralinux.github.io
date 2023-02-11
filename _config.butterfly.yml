@@ -95,7 +95,7 @@ avatar:
 disable_top_img: false
 
 # The banner image of home page
-index_img: "https://cdn.jsdelivr.net/gh/ultralinux/ultralinux_blog/img/LieAll_20221210_172944415.NIGHT.jpg"
+index_img: "./img/LieAll_20221210_172944415.NIGHT.jpg"
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: https://img-blog.csdnimg.cn/96e27b089c694001a0884fdb63027b74.webp#pic_center
