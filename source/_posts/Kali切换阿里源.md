@@ -15,6 +15,6 @@ copyright_info: 此文章版权归ultralinux所有，如有转载，请注明來
     deb https://mirrors.aliyun.com/kali kali-rolling main non-free contrib
     deb-src https://mirrors.aliyun.com/kali kali-rolling main non-free contrib
 
+![](https://img.ultralinux.cn/img/202302151026184.png?imageslim)
 #### kali的apt源
     Kali Rolling：及时更新版（最常用的源）
-
