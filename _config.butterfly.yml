@@ -88,14 +88,14 @@ favicon: /img/favicon.png
 
 # Avatar (頭像)
 avatar:
-  img: https://img.ultralinux.cn/img/202302122213628.gif?imageslim #./img/GIF_20210728_160155.gif # https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
+  img: https://img-blog.csdnimg.cn/c140d4b4d92c454e9153d9f670bd2f77.gif#pic_center #./img/GIF_20210728_160155.gif # https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png
   effect: false
 
 # Disable all banner image
 disable_top_img: false
 
 # The banner image of home page
-index_img: https://img.ultralinux.cn/img/202302122213625.jpg?imageslim #"./img/LieAll_20221210_172944415.NIGHT.jpg"
+index_img: https://img-blog.csdnimg.cn/bb42a6a976714f8ab211ad2c315c4fae.jpeg#pic_center #"./img/LieAll_20221210_172944415.NIGHT.jpg"
 
 # If the banner of page not setting, it will show the top_img
 default_top_img: https://img-blog.csdnimg.cn/96e27b089c694001a0884fdb63027b74.webp#pic_center
@@ -114,7 +114,7 @@ tag_per_img:
 
 # If the banner of category page not setting, it will show the top_img
 # note: category page, not categories page (子分類頁面的 top_img)
-category_img:
+category_img: https://img-blog.csdnimg.cn/ed17e5f4829849f180f5a4f4babbca95.jpeg?x-oss-process=image/resize,m_fixed,h_224,w_224
 
 # The banner image of category page
 # format:
