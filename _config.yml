@@ -108,7 +108,7 @@ deploy:
   - type: git
     repo: https://ultralinux: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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@github.com/ultralinux/ultralinux.github.io.git
     branch: run-gape
-  - type: baidu_url_submitter
+#  - type: baidu_url_submitter
 
 search:
   path: search.xml
