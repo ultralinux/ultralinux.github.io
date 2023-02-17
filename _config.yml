@@ -15,7 +15,10 @@ timezone: 'Asia/Shanghai'
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://blog.ultralinux.cn/ # 部署位置的，不是上传位置的。
 root: /
-permalink: :year/:month/:day/:title/
+permalink: archives/:abbrlink.html
+abbrlink:
+  alg: crc32  # 算法：crc16(default) and crc32
+  rep: hex    # 进制：dec(default) and hex
 permalink_defaults:
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
@@ -102,11 +105,10 @@ theme: butterfly       ## landscape(默认)
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
-
-####-----------禁用一键部署--------####
 deploy:
   - type: git
-    repo: https://ultralinux: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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@github.com/ultralinux/ultralinux.github.io.git
+    repo: 
+      github:https://github.com/ultralinux/ultralinux.github.io.git
     branch: run-gape
   - type: baidu_url_submitter
 
@@ -129,3 +131,11 @@ baidu_url_submit:
   host: https://blog.ultralinux.cn # 百度站长平台中注册的域名
   token: q5tZDviHniW1vYK9 # 秘钥，百度站长平台 > 推送接口 > 接口调用地址中token字段
   path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里，不用改
+
+nofollow:
+  enable: true
+  field: site
+  exclude:
+    - ''
+    #- 'exclude1.com'
+    #- 'exclude2.com'
