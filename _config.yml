@@ -104,13 +104,11 @@ theme: butterfly       ## landscape(默认)
 ## Docs: https://hexo.io/docs/one-command-deployment
 
 ####-----------禁用一键部署--------####
-#deploy:
-#  type: 'git'
-#  repo: 'https://github.com/ultralinux/ultralinux.github.io.git'
-#  branch: main
-#由于使用Netlify构建(建站)的原因，也不要使用官网的另一种部署方法
-#就像是开发人员上传代码一样就好了
-####------------------------------####
+deploy:
+  - type: git
+    repo: https://ultralinux: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.com/ultralinux/ultralinux.github.io.git
+    branch: run-gape
+  - type: baidu_url_submitter
 
 search:
   path: search.xml
@@ -129,5 +127,5 @@ baidusitemap:
 baidu_url_submit:
   count: 10 # 提交最新的10个链接
   host: https://blog.ultralinux.cn # 百度站长平台中注册的域名
-  token: # 秘钥，百度站长平台 > 推送接口 > 接口调用地址中token字段
+  token: q5tZDviHniW1vYK9 # 秘钥，百度站长平台 > 推送接口 > 接口调用地址中token字段
   path: baidu_urls.txt # 文本文档的地址， 新链接会保存在此文本文档里，不用改
