@@ -105,8 +105,7 @@ theme: butterfly       ## landscape(默认)
 deploy:
   - type: git
     repo: 
-      github: https://github.com/ultralinux/ultralinux.github.io.git
-      branch: run-gape
+      github: https://github.com/ultralinux/ultralinux.github.io.git,run-gape
   - type: baidu_url_submitter
 
 search:

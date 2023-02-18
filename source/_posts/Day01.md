@@ -2,7 +2,6 @@
 title: Markdown
 categories: 小公举
 description: Markdown基本语法——Typora、样式
-sticky: 4
 copyright_author: ultralinux
 copyright_author_href: 不给看，嘿嘿！
 copyright_url: 'https://blog.ultralinux.cn'

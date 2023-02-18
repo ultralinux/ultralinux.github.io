@@ -1,0 +1,238 @@
+---
+title: Markdown
+categories: ultralinux_blog
+description: Hexo_blog.ultralinux.cn
+sticky: 4
+date: 2023-02-18 21:15:29
+tags: blog.ultralinux.cn
+---
+
+
+
+## 思路
+
+test1：Hexo博客框架+GitHub项目文件托管+Netlify建站+ClouldFlare加速
+
+- 部署后正常
+- 出现问题
+	- ClouldFlare
+		- 使用移动数据网络无法访问，且宽带访问速度有所下降（感知明显卡顿加载牛速）
+
+- 解决：
+	- 去掉ClouldFlare加速后，只使用dns厂商自带的dns解析解决
+		- 后得知CloudFlare加速大量被薅羊毛用于梯子导致被屏蔽已至极其拉胯（并且我个人在测试当中发现就第一天勉强能用，但仍不如不用）
+		- 又得知且意外发现，Netlify在大陆可以直接使用
+
+test2：Hexo博客框架+GitHub项目文件托管+Netlify建站
+
+- 部署后正常
+- 遇到问题
+	- 百度收录最佳方法——主动推送方案
+		- 新链接的产生， hexo generate 会产生一个文本文件，里面包含最新的链接
+		- 新链接的提交， hexo deploy 会从上述文件中读取链接，提交至百度搜索引擎
+	- 更新方案繁琐
+		- 本地编辑 hexo s测试
+		- git add . --> git commit -m "0.0.0.0" --> git push -u origin main
+		- 提交源码到GitHub，Netlify拉取源码后构建发布
+- 解决：
+	- 采用插件的方式一键部署
+	- 其实在hexo官网就有，是一开始就看到了，但感觉不是刚需
+	- 现在在两个问题下，发现这个方案可两难自解
+
+## 方案
+
+- Hexo+Github+Netlify+又拍云CDN && 七牛云图床 && HTTPS && 尽量使用免费的 && 域名_阿里云|万网 && SSL证书TrustAsia
+-  && Butterfly主题(推荐使用npm方式安装,并使用根目录下的__config.butterfly.yml主题配置文件以方便后续升级配置)
+	- 本地编辑 hexo 测试
+	- 本地构建
+		- 备份源码main
+		- 一键上传到GitHub，run-page
+	- netlify只拉取构建好(run-page分支)的文件，部署
+
+### [Hexo](https://hexo.io/zh-cn/)博客框架
+
+
+
+### [Github](https://github.com/)代码仓库
+
+
+
+### [Netlif](https://www.netlify.com/)静态托管
+
+
+
+### [又拍云](https://www.upyun.com/)CDN加速
+
+
+
+### [七牛云](https://www.qiniu.com/)图床&CDN
+
+
+
+
+
+
+
+## 一些点
+
+
+
+> 修改package.json文件，优化执行命令
+
+```json
+  "scripts": {
+    ......       
+	"deploy": "hexo clean && hexo generate && hexo deploy",
+    "server": "hexo clean && hexo generate && hexo server"
+# 
+```
+
+
+
+## 准备工作
+
+- git_版本控制工具
+- node_JavaScript运行环境
+- npm,cnpm,yarn_包管理工具
+
+```bash
+$ node -v && npm -v && git -v
+v19.5.0
+9.4.1
+git version 2.39.1.windows.1
+```
+
+```bash
+npm install hexo-cli -g # 安装Hexo
+hexo -v
+hexo init <文件夹名称>  # 使用hexo命令在指定的<folder>文件夹下初始化创建一个博客项目
+cd <文件夹名称>         # 进入创建好的项目目录
+npm install           # 使用npm安装依赖 (克隆仓库需一般没有依赖重新安装)
+hexo clean   # 清理各种缓存和旧文件
+hexo g       # 生成静态文件
+hexo s       # 预览
+```
+
+```bash
+
+```
+
+## 配置仓库
+
+### 新建仓库
+
+注册名.github.io 必须
+
+ultralinux_blog 描述
+
+Public 必须
+
+Add a README file 仓库不能为空,因此创建一个
+
+### Git版本控制
+
+> .gitignore 文件    # 这里的位置是博客根目录
+
+```bash
+.DS_Store
+Thumbs.db
+db.json
+*.log
+node_modules/
+public/
+.deploy*/
+.vscode/
+.idea/
+/.idea/
+.idea
+.themes/
+```
+
+```bash
+git config --global user.name ultralinux #用户名和邮箱与GitHub保持一致
+git config --global user.email ultralinux@ultralinux.cn
+echo "# ultralinux.github.io" >> README.md #默认就这个,不管
+git init # 初始化git仓库 or git clone 仓库地址 # 克隆
+git remote add origin https://github.com/github仓库地址/xxx.github.io.git  #绑定
+git branch -M main # 将分支重命名为main(强制)
+```
+
+```bash
+git add .  #向git仓库添加文件
+git commit -m "0.0.0.0"   #本地仓库提交
+git push -u origin main   #向GitHub远程仓库main分支推送代码
+```
+
+### 利用[hexo-deployer-git](https://github.com/hexojs/hexo-deployer-git)实现[一键部署](https://hexo.io/zh-cn/docs/one-command-deployment)
+
+```bash
+$ npm install hexo-deployer-git --save	#安装
+```
+
+> 配置此插件.__config.yml   Hexo框架配置文件 博客根目录下
+
+```yaml
+deploy:
+  - type: git
+    repo: https://github.com/ultralinux/ultralinux.github.io.git
+    branch: run-gape
+  - type: baidu_url_submitter # 请忽略这一行
+```
+
+> 优化执行命令package.json
+
+```json
+  "scripts": {
+    "build": "hexo generate",
+    "clean": "hexo clean",
+    "deploy": "hexo clean && hexo generate && hexo deploy",
+    "server": "hexo clean && hexo generate && hexo server",
+    "netlify": "npm run clean && npm run build" //这一行为新加请忽略,注意逗号.Netlify构建使用
+```
+
+> 本地构建与Netlify构建的区别
+
+- 本地构建 hexo d 到仓库run-gape分支,Netlify拉取构建好的文件
+	- Netlify创建项目__选中仓库run-page分支
+	- Basic build settings 全部留空
+- Netlify构建 git add .-->git commit -m ""-->git push -u origin main 到仓库main分支,Netlify拉取源码并构建
+	- Netlify创建项目__选中仓库main分支
+	- Basic build settings
+		- Base directory       留空,表示项目目录是仓库目录的根目录。
+		- Build command     npm run netlify
+		- Publish directory   public
+
+
+
+
+
+
+
+
+
+
+
+
+
+------
+
+
+
+## 参考链接
+
+[Hexo博客框架+GitHub项目文件托管+Netlify建站+ ClouldFlare加速(加速以拉胯)  ]:https://blog.cuijiacai.com/blog-building/
+[上传github版本控制,一键部署+Netlify]:https://master--epic-hypatia-977c29.netlify.app/2018/08/25/hexo-learn
+[七牛云创建存储空间并绑定自定义域名-https协议]:https://www.bbsmax.com/A/ke5jBkZa5r/
+[用 imageslim后缀命令为七牛云空间的图片瘦身]:https://www.yigujin.cn/1139.html
+[Butterfly主题;又拍云需配置ssl证书,否则会出现下一个参考链接的问题,然后建议开启TLS1.3 ]:https://www.bilibili.com/video/BV1Ko4y1S7mv/?spm_id_from=333.788&vd_source=57b0139bce6952af7898d18a278d1668
+[整理]:https://zhangshier.vip/posts/41646/
+[解决github文件夹有向右的白色箭头并且不能打开的解决办法]:https://www.cnblogs.com/pangya/p/15979539.html
+[Gitee图床被封！如何实现无缝图床转移？]:https://www.bilibili.com/video/BV1Ca411t7ZV/?spm_id_from=333.337.search-card.all.click&vd_source=57b0139bce6952af7898d18a278d1668
+[Butterfly 安装文档(一) 快速开始]:https://butterfly.js.org/posts/21cfbf15/
+[Git push命令报hint: Updates were rejected because the remote contains work that you do问题]:https://blog.csdn.net/m0_63217468/article/details/126667119
+[站长工具]:https://ping.chinaz.com/
+[https://fontawesome.com/]:https://fontawesome.com/icons?from=io
+[Font Awesome的正确简单使用方法]:https://blog.csdn.net/qq_41061352/article/details/79414167
+[【狂神说Java】Git最新教程通俗易懂]:https://www.bilibili.com/video/BV1FE411P7B3/?p=11&spm_id_from=333.880.my_history.page.click&vd_source=57b0139bce6952af7898d18a278d1668
+[Hexo——系列教程]:https://www.bilibili.com/video/BV1q741167PJ?p=1&vd_source=57b0139bce6952af7898d18a278d1668
+[Centos 7 安装Nodejs使用npm命令]:https://blog.csdn.net/u012605514/article/details/127086052
