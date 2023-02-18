@@ -1,13 +1,14 @@
 ---
 title: Rust_1.入门指南
-date: 2022-12-06 13:59:07
-tags: "Rust Language"
+tags: Rust Language
 categories: Rust程序设计语言
 description: 一个编程语言
 copyright_author: ultralinux
 copyright_author_href: 不给看，嘿嘿！
-copyright_url: https://blog.ultralinux.cn
+copyright_url: 'https://blog.ultralinux.cn'
 copyright_info: 此文章版权归ultralinux所有，如有转载，请注明來自原作者
+abbrlink: 91c2a097
+date: 2022-12-06 13:59:07
 ---
 > 官网
 

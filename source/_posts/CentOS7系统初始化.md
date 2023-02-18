@@ -1,13 +1,14 @@
 ---
 title: CentOS 7 系统初始化
-date: 2022-04-04 10:01:36
-tags:
 categories: 未分类
 description: 断片了
 copyright_author: ultralinux
 copyright_author_href: 不给看，嘿嘿！
-copyright_url: https://blog.ultralinux.cn
+copyright_url: 'https://blog.ultralinux.cn'
 copyright_info: 此文章版权归ultralinux所有，如有转载，请注明來自原作者
+abbrlink: 75224c2
+date: 2022-04-04 10:01:36
+tags:
 ---
 
 > 禁用防火墙与selinux

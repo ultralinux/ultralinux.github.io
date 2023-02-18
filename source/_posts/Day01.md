@@ -1,17 +1,15 @@
 ---
-title: Markdown # 必选
-date: 2023-02-13 14:20:29 # 必选
-tags: # 文章标签
-categories: 小公举 # 文章分类
-description: Markdown基本语法——Typora、样式 # 页面描述
-sticky: 4 #置顶 数值大即优先级
-# 版权
-#copyright: false # 不显示版权信息
+title: Markdown
+categories: 小公举
+description: Markdown基本语法——Typora、样式
+sticky: 4
 copyright_author: ultralinux
-copyright_author_href: 不给看，嘿嘿！ # https://xxxxxx.com
-copyright_url: https://blog.ultralinux.cn
+copyright_author_href: 不给看，嘿嘿！
+copyright_url: 'https://blog.ultralinux.cn'
 copyright_info: 此文章版权归ultralinux所有，如有转载，请注明來自原作者
-# /版权
+abbrlink: 6fc8eab5
+date: 2023-02-13 14:20:29
+tags:
 ---
 
 

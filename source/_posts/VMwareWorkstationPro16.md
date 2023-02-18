@@ -1,13 +1,14 @@
 ---
 title: VMware Workstation Pro 16
-date: 2022-04-04 12:10:58
-tags:
 categories: 未分类
 description: 关于win个人喜欢的一些软件
 copyright_author: ultralinux
 copyright_author_href: 不给看，嘿嘿！
-copyright_url: https://blog.ultralinux.cn
+copyright_url: 'https://blog.ultralinux.cn'
 copyright_info: 此文章版权归ultralinux所有，如有转载，请注明來自原作者
+abbrlink: da61c4cb
+date: 2022-04-04 12:10:58
+tags:
 ---
 
 *   [官方下载位置](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html)

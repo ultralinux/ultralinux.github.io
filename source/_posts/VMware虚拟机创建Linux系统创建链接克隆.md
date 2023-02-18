@@ -1,13 +1,14 @@
 ---
 title: VMware虚拟机创建Linux系统创建链接克隆
-date: 2022-04-04 14:21:21
-tags:
 categories: 未分类
 description: 偷懒中
 copyright_author: ultralinux
 copyright_author_href: 不给看，嘿嘿！
-copyright_url: https://blog.ultralinux.cn
+copyright_url: 'https://blog.ultralinux.cn'
 copyright_info: 此文章版权归ultralinux所有，如有转载，请注明來自原作者
+abbrlink: 3df717f2
+date: 2022-04-04 14:21:21
+tags:
 ---
 
 *   节省系统安装时间

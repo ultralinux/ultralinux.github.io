@@ -1,13 +1,14 @@
 ---
 title: 最小化安装CentOS7.9
-date: 2022-04-04 10:53:36
-tags:
 categories: 未分类
 description: 最后的Centos
 copyright_author: ultralinux
 copyright_author_href: 不给看，嘿嘿！
-copyright_url: https://blog.ultralinux.cn
+copyright_url: 'https://blog.ultralinux.cn'
 copyright_info: 此文章版权归ultralinux所有，如有转载，请注明來自原作者
+abbrlink: c5acd6aa
+date: 2022-04-04 10:53:36
+tags:
 ---
 
 

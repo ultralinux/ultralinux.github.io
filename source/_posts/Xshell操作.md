@@ -1,13 +1,14 @@
 ---
 title: Xshell操作
-date: 2022-04-04 14:15:58
-tags:
 categories: 未分类
 description: xshell
 copyright_author: ultralinux
 copyright_author_href: 不给看，嘿嘿！
-copyright_url: https://blog.ultralinux.cn
+copyright_url: 'https://blog.ultralinux.cn'
 copyright_info: 此文章版权归ultralinux所有，如有转载，请注明來自原作者
+abbrlink: 7645713a
+date: 2022-04-04 14:15:58
+tags:
 ---
 **一、图形化配置网络，关于配置VM的用处不大（也有其它方法）**
 		1. 这里不建议使用DHCP获取IP地址(上我的船一个net8上网和xshell全都要)![在这里插入图片描述](https://img-blog.csdnimg.cn/20200503221713737.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0ZsYWcyOTIw,size_16,color_FFFFFF,t_70)

@@ -15,14 +15,11 @@ timezone: 'Asia/Shanghai'
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://blog.ultralinux.cn/ # 部署位置的，不是上传位置的。
 root: /
-permalink: archives/:abbrlink.html
-abbrlink:
-  alg: crc32  # 算法：crc16(default) and crc32
-  rep: hex    # 进制：dec(default) and hex
+permalink: a/:abbrlink/
 permalink_defaults:
 pretty_urls:
-  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: false # Set to false to remove trailing '.html' from permalinks
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
@@ -109,7 +106,7 @@ deploy:
   - type: git
     repo: 
       github: https://github.com/ultralinux/ultralinux.github.io.git
-    branch: run-gape
+      branch: run-gape
   - type: baidu_url_submitter
 
 search:
@@ -135,7 +132,20 @@ baidu_url_submit:
 nofollow:
   enable: true
   field: site
-  exclude:
-    - ''
-    #- 'exclude1.com'
-    #- 'exclude2.com'
+  exclude: ''
+
+# abbrlink config
+abbrlink:
+  alg: crc32      #支持crc16（默认）和crc32
+  rep: hex        #支持dec（默认）和hex
+  drafts: false   #（true）处理草稿，（false）不处理草稿。false（默认）
+  # 从目录树生成类别
+  # depth: 要生成的目录树的最大深度，应大于0
+  auto_category:
+     enable: true  #true(默认)
+     depth:        #3(默认)
+     over_write: false 
+  auto_title: false #启用自动标题，可按路径自动填充标题
+  auto_date: false #启用自动日期功能，可以按今天的时间自动填充日期
+  force: false #启用强制模式，在此模式下，插件将忽略缓存，并为每个帖子计算abbrlink，即使它已经有了abbrlink。
+

@@ -1,13 +1,14 @@
 ---
 title: Xshell使用
-date: 2022-04-04 14:10:58
-tags:
 categories: 未分类
 description: 一个 终端，，
 copyright_author: ultralinux
 copyright_author_href: 不给看，嘿嘿！
-copyright_url: https://blog.ultralinux.cn
+copyright_url: 'https://blog.ultralinux.cn'
 copyright_info: 此文章版权归ultralinux所有，如有转载，请注明來自原作者
+abbrlink: 78eaa479
+date: 2022-04-04 14:10:58
+tags:
 ---
 
 ## 壹、全局修改
