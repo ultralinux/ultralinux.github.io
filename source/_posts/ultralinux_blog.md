@@ -235,4 +235,5 @@ deploy:
 [Font Awesome的正确简单使用方法]:https://blog.csdn.net/qq_41061352/article/details/79414167
 [【狂神说Java】Git最新教程通俗易懂]:https://www.bilibili.com/video/BV1FE411P7B3/?p=11&spm_id_from=333.880.my_history.page.click&vd_source=57b0139bce6952af7898d18a278d1668
 [Hexo——系列教程]:https://www.bilibili.com/video/BV1q741167PJ?p=1&vd_source=57b0139bce6952af7898d18a278d1668
+[git如何删除远程分支]:https://www.php.cn/tool/git/478946.html
 [Centos 7 安装Nodejs使用npm命令]:https://blog.csdn.net/u012605514/article/details/127086052
