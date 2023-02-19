@@ -1,12 +1,12 @@
 ---
-title: Markdown
+title: Markdown_Typora
 categories: 小公举
 description: Markdown基本语法——Typora、样式
 copyright_author: ultralinux
 copyright_author_href: 不给看，嘿嘿！
 copyright_url: 'https://blog.ultralinux.cn'
 copyright_info: 此文章版权归ultralinux所有，如有转载，请注明來自原作者
-abbrlink: 6fc8eab5
+abbrlink: 5b96f4e8
 date: 2023-02-13 14:20:29
 tags:
 ---
